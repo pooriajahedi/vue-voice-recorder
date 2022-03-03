@@ -23,8 +23,7 @@ export default {
       this.is_recording = false;
       this.recorder.stop();
       this.recorder.stopPlay();
-      //let blob = this.recorder.getWAVBlob();
-      //this.recorder.downloadWAV('myrecord');
+      this.recorder.downloadWAV('myrecord');
     },
     PauseRecord() {
       this.recorder.pause();
@@ -50,7 +49,6 @@ export default {
   },
   mounted() {
     this.recorder = new Recorder();
-
   }
 }
 </script>
